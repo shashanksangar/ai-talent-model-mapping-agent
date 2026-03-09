@@ -1,0 +1,172 @@
+# AI Talent Operations - Model Mapping Agent Configuration
+
+# arXiv API Configuration
+arxiv:
+  base_url: "http://export.arxiv.org/api/query"
+  max_results: 5
+  timeout: 10
+  retry_attempts: 3
+
+# Google Scholar Integration
+scholar:
+  enabled: true
+  max_retries: 3
+  timeout: 10
+  # Note: Scholar API access requires special setup
+  api_key: "${GOOGLE_SCHOLAR_API_KEY}"
+
+# GitHub Integration
+github:
+  enabled: true
+  search_users: true
+  timeout: 10
+  max_retries: 3
+  api_token: "${GITHUB_API_TOKEN}"
+
+# Academic Website Search
+academic_search:
+  enabled: true
+  timeout: 10
+  max_retries: 2
+  # University domains to search
+  university_domains:
+    - ".edu"
+    - ".ac.uk"
+    - ".ac.ca"
+    - ".edu.au"
+    - "mit.edu"
+    - "stanford.edu"
+    - "berkeley.edu"
+    - "harvard.edu"
+    - "cam.ac.uk"
+    - "ox.ac.uk"
+
+# LinkedIn Integration (future)
+linkedin:
+  enabled: false
+  api_key: "${LINKEDIN_API_KEY}"
+  api_secret: "${LINKEDIN_API_SECRET}"
+
+# Twitter/X Integration (future)
+twitter:
+  enabled: false
+  api_key: "${TWITTER_API_KEY}"
+  api_secret: "${TWITTER_API_SECRET}"
+
+# Output Configuration
+output:
+  save_json: true
+  save_markdown: false
+  include_abstract: true
+  max_abstract_length: 500
+  include_metrics: true
+
+# Caching Configuration
+cache:
+  enabled: true
+  cache_dir: ".cache"
+  max_age_days: 7
+  compress_cache: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "model_mapping_agent.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# UI Configuration
+ui:
+  theme: "modern"
+  colors:
+    primary: "#007acc"
+    success: "#28a745"
+    warning: "#ffc107"
+    error: "#dc3545"
+  table_style: "rounded"
+
+# Model Categories for Classification
+model_categories:
+  nlp:
+    - "natural language"
+    - "language model"
+    - "text"
+    - "conversation"
+    - "chat"
+    - "translation"
+    - "sentiment"
+
+  computer_vision:
+    - "vision"
+    - "image"
+    - "visual"
+    - "object detection"
+    - "segmentation"
+    - "classification"
+    - "recognition"
+
+  multimodal:
+    - "multimodal"
+    - "vision-language"
+    - "image-text"
+    - "audio-visual"
+    - "cross-modal"
+
+  reinforcement_learning:
+    - "reinforcement"
+    - "rl "
+    - "policy"
+    - "agent"
+    - "environment"
+
+  generative:
+    - "generative"
+    - "diffusion"
+    - "gan"
+    - "vae"
+    - "generation"
+
+  transformers:
+    - "transformer"
+    - "attention"
+    - "self-attention"
+    - "encoder"
+    - "decoder"
+
+  large_language_models:
+    - "large language model"
+    - "llm"
+    - "foundation model"
+    - "pretrained"
+    - "fine-tun"
+
+# Known Models Database (for fallback/manual entry)
+known_models:
+  "GPT-3":
+    technical_summary: "A large language model trained on massive internet text data using transformer architecture."
+    first_author: "Tom B. Brown"
+    categories: ["NLP", "Large Language Model", "Transformer"]
+
+  "BERT":
+    technical_summary: "Bidirectional Encoder Representations from Transformers - a transformer-based model for understanding context in text."
+    first_author: "Jacob Devlin"
+    categories: ["NLP", "Transformer"]
+
+  "LLaMA":
+    technical_summary: "Large Language Model Meta AI - open-source foundation model trained on publicly available datasets."
+    first_author: "Hugo Touvron"
+    categories: ["NLP", "Large Language Model", "Open Source"]
+
+  "CLIP":
+    technical_summary: "Contrastive Language-Image Pre-training - connects text and images using contrastive learning."
+    first_author: "Alec Radford"
+    categories: ["Multimodal", "Computer Vision", "NLP"]
+
+  "ViT":
+    technical_summary: "Vision Transformer - applies transformer architecture to computer vision tasks."
+    first_author: "Alexey Dosovitskiy"
+    categories: ["Computer Vision", "Transformer"]
+
+  "T5":
+    technical_summary: "Text-to-Text Transfer Transformer - unifies NLP tasks into text-to-text format."
+    first_author: "Colin Raffel"
+    categories: ["NLP", "Transformer"]

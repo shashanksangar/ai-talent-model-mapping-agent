@@ -1,0 +1,36 @@
+# AI Talent Operations - Model Mapping Agent Requirements
+
+# Core dependencies
+questionary>=2.0.0      # Interactive CLI prompts
+rich>=13.0.0           # Rich console formatting
+pyyaml>=6.0.0          # YAML configuration parsing
+requests>=2.28.0       # HTTP requests for APIs
+
+# Data processing
+python-dateutil>=2.8.0  # Date parsing utilities
+
+# Development and testing
+pytest>=7.0.0          # Testing framework
+pytest-cov>=4.0.0      # Test coverage
+pytest-mock>=3.10.0    # Mocking for tests
+
+# Optional: For enhanced academic search
+scholarly>=1.7.0       # Google Scholar API (if available)
+PyGithub>=1.58.0       # GitHub API integration
+
+# Optional: For web scraping (use carefully and respectfully)
+beautifulsoup4>=4.11.0 # HTML parsing
+selenium>=4.10.0       # Browser automation (for complex sites)
+
+# Optional: For advanced NLP processing
+transformers>=4.21.0   # Hugging Face transformers (for model analysis)
+torch>=1.13.0          # PyTorch (if needed for model inspection)
+
+# Optional: For caching and performance
+cachetools>=5.3.0      # Caching utilities
+lru-dict>=1.1.0        # LRU cache
+
+# Optional: For export functionality
+pandas>=1.5.0          # Data manipulation
+openpyxl>=3.0.0        # Excel export
+markdown>=3.4.0        # Markdown generation
